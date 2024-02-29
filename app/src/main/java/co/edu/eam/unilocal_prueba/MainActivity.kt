@@ -11,6 +11,32 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Log.e("MainActivity", "onCreate()")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.e("MainActivity", "onStart()")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.e("MainActivity", "onPause()")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.e("MainActivity", "onResume()")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.e("MainActivity", "onStop()")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.e("MainActivity", "onRestart()")
     }
 
     fun irARegistro(v: View){
