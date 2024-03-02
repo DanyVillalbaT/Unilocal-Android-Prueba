@@ -11,14 +11,16 @@ import co.edu.eam.unilocal_prueba.R
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var texto: TextView
-    lateinit var textoInicial: String
+    //Lo que está comentado hace referencia a las clases 8 y 9 de los PDFs y videos
+
+    /*lateinit var texto: TextView
+    lateinit var textoInicial: String*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        texto = findViewById(R.id.texto_inicial)
+        /*texto = findViewById(R.id.texto_inicial)
 
         if (savedInstanceState != null){
             textoInicial = savedInstanceState.getString("texto").toString()
@@ -26,12 +28,12 @@ class MainActivity : AppCompatActivity() {
         }else{
             textoInicial = "Texto Inicial"
             texto.text = textoInicial
-        }
+        }*/
 
         Log.e("MainActivity", "onCreate()")
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
+    /*override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putString("texto", textoInicial)
     }
@@ -39,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         Log.e("MainActivity", savedInstanceState.getString("texto").toString())
-    }
+    }*/
 
     override fun onStart() {
         super.onStart()
@@ -80,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(intentLogin)
     }
 
-    fun irACrearLugar(v: View){
+    /*fun irACrearLugar(v: View){
         //Hay diferentes maneras de imprimir mensajes en pantalla, unos más elaborados que otros.
         val intentCrearLugar = Intent(this, CrearLugarActivity::class.java)
         startActivity(intentCrearLugar)
@@ -90,5 +92,5 @@ class MainActivity : AppCompatActivity() {
     fun cambiarTexto(v: View){
         textoInicial = "Nuevo valor"
         texto.text = textoInicial
-    }
+    }*/
 }

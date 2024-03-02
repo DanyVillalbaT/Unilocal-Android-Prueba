@@ -8,11 +8,14 @@
     android:orientation="vertical"
     tools:context=".activities.MainActivity">
 
+    <!--
     <TextView
         android:id="@+id/texto_inicial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30sp" />
+
+    -->
 
     <Button
         android:layout_width="wrap_content"
@@ -26,16 +29,19 @@
         android:text="Ir a login"
         android:onClick="irALogin"/>
 
+    <!--
     <Button
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:text="Ir a crear lugar"
         android:onClick="irACrearLugar"/>
 
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:text="Cambiar Texto"
         android:onClick="cambiarTexto"/>
+    -->
 
 </LinearLayout>
