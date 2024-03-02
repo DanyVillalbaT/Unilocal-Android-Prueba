@@ -1,4 +1,4 @@
-package co.edu.eam.unilocal_prueba
+package co.edu.eam.unilocal_prueba.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import co.edu.eam.unilocal_prueba.R
 
 class MainActivity : AppCompatActivity() {
 

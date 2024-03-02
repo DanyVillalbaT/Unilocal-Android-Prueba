@@ -1,8 +1,9 @@
-package co.edu.eam.unilocal_prueba
+package co.edu.eam.unilocal_prueba.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import co.edu.eam.unilocal_prueba.R
 
 class RegistroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
