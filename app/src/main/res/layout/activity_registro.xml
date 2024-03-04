@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activities.RegistroActivity">
 
     <!-- Clase 7 PDF
@@ -14,5 +15,36 @@
         android:text="Pantalla de registro"
         android:textSize="30sp" />
         -->
+
+    <ToggleButton
+        android:id="@+id/btn_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="Apagado"
+        android:textOn="Encendido" />
+
+    <Switch
+        android:id="@+id/btn_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:id="@+id/btn_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher_round" />
+    
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_flotante"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_done_android" />
+    
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/btn_flotante_texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_done_downloaded"
+        android:text="Hacer algo" />
 
 </LinearLayout>

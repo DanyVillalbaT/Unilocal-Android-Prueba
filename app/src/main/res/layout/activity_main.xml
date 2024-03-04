@@ -7,6 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
+    <!-- Lo que está comentado hace referencia a las clases 8 y 9 de los PDFs y videos-->
+
     <!--
     <TextView
         android:id="@+id/texto_inicial"
@@ -16,6 +18,7 @@
 
     -->
 
+    <!-- Aquí se supone que va el mapa de google -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -41,11 +44,12 @@
         android:layout_alignStart="@+id/btn_login"
         android:onClick="irARegistro"/>
 
-    <Button
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/btn_login"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:text="@string/txt_btn_login"
+        app:icon="@drawable/ic_done_android"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="40dp"
