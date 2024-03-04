@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".activities.MainActivity">
 
     <!--
@@ -17,16 +16,40 @@
 
     -->
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DFDFDF" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:hint="Escriba el lugar que quiere buscar"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/ic_launcher_round"/>
+
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_registro"
+        android:layout_width="130dp"
         android:layout_height="60dp"
         android:text="Ir a registro"
+        android:layout_above="@+id/btn_login"
+        android:layout_alignStart="@+id/btn_login"
         android:onClick="irARegistro"/>
 
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_login"
+        android:layout_width="130dp"
         android:layout_height="60dp"
         android:text="Ir a login"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="40dp"
         android:onClick="irALogin"/>
 
     <!--
@@ -44,4 +67,4 @@
         android:onClick="cambiarTexto"/>
     -->
 
-</LinearLayout>
+</RelativeLayout>
