@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">unilocal-prueba</string>
+
+    <!-- Textos del layout main -->
+    <string name="txt_busqueda">Escriba el lugar que quiere buscar</string>
+    <string name="txt_btn_registro">Ir a registro</string>
+    <string name="txt_btn_login">Ir a login</string>
+
+    <!-- Textos del layout login -->
+    <string name="txt_email">Escriba su correo</string>
+    <string name="txt_password">Escriba su contraseña</string>
+    <string name="txt_btn_inicio_sesion">Iniciar Sesión</string>
+    <string name="txt_btn_registrarse">Registrarse</string>
+
 </resources>

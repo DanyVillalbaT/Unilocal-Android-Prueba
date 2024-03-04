@@ -7,10 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".activities.RegistroActivity">
 
+    <!-- Clase 7 PDF
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pantalla de registro"
         android:textSize="30sp" />
+        -->
 
 </LinearLayout>

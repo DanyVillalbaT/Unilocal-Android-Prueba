@@ -24,7 +24,7 @@
     <EditText
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:hint="Escriba el lugar que quiere buscar"
+        android:hint="@string/txt_busqueda"
         android:gravity="center"
         android:padding="10dp"
         android:layout_centerHorizontal="true"
@@ -36,7 +36,7 @@
         android:id="@+id/btn_registro"
         android:layout_width="130dp"
         android:layout_height="60dp"
-        android:text="Ir a registro"
+        android:text="@string/txt_btn_registro"
         android:layout_above="@+id/btn_login"
         android:layout_alignStart="@+id/btn_login"
         android:onClick="irARegistro"/>
@@ -45,7 +45,7 @@
         android:id="@+id/btn_login"
         android:layout_width="130dp"
         android:layout_height="60dp"
-        android:text="Ir a login"
+        android:text="@string/txt_btn_login"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="40dp"
