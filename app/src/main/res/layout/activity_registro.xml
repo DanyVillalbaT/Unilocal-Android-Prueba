@@ -6,7 +6,74 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".activities.RegistroActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nombre_layout"
+        style="@style/til_form">
+
+        <EditText
+            android:id="@+id/nombre_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_nombre"
+            android:background="@drawable/fondo_forms"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nickname_layout"
+        style="@style/til_form">
+
+        <EditText
+            android:id="@+id/nickname_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_nickname"
+            android:background="@drawable/fondo_forms"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_layout"
+        style="@style/til_form">
+
+        <EditText
+            android:id="@+id/email_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_email"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/fondo_forms"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_layout"
+        style="@style/til_form">
+
+        <EditText
+            android:id="@+id/password_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_password"
+            android:inputType="textPassword"
+            android:background="@drawable/fondo_forms"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:text="@string/txt_btn_registrarse" />
 
     <!-- Clase 7 PDF
     <TextView
@@ -16,6 +83,7 @@
         android:textSize="30sp" />
         -->
 
+    <!-- Clase 11 PDF y video
     <ToggleButton
         android:id="@+id/btn_toggle"
         android:layout_width="wrap_content"
@@ -46,5 +114,6 @@
         android:layout_height="wrap_content"
         app:icon="@drawable/ic_done_downloaded"
         android:text="Hacer algo" />
+        -->
 
 </LinearLayout>

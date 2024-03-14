@@ -17,15 +17,12 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email_layout"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp">
+        style="@style/til_form">
 
         <EditText
             android:id="@+id/email_usuario"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:hint="@string/txt_email"
             android:inputType="textEmailAddress"
             android:background="@drawable/fondo_forms"/>
@@ -34,16 +31,12 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password_layout"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="10dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp">
+        style="@style/til_form">
 
         <EditText
             android:id="@+id/password_usuario"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:hint="@string/txt_password"
             android:inputType="textPassword"
             android:background="@drawable/fondo_forms"/>

@@ -5,14 +5,18 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageButton
+import android.widget.Toast
 import android.widget.ToggleButton
 import co.edu.eam.unilocal_prueba.R
+import co.edu.eam.unilocal_prueba.bd.Usuarios
 import co.edu.eam.unilocal_prueba.databinding.ActivityRegistroBinding
+import co.edu.eam.unilocal_prueba.models.Usuario
 import com.google.android.material.snackbar.Snackbar
 
 class RegistroActivity : AppCompatActivity() {
 
     //Lo comentado es de las clases 8 y 9 PDFs y el video.
+    //Lo comentado de los botones y sus métodos es de la clase 11
 
     lateinit var binding: ActivityRegistroBinding
 
@@ -21,6 +25,7 @@ class RegistroActivity : AppCompatActivity() {
         binding = ActivityRegistroBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        /**
         binding.btnToggle.setOnClickListener {escucharEventoToggle()}
 
         binding.btnSwitch.setOnClickListener {escucharEventoSwitch()}
@@ -30,13 +35,62 @@ class RegistroActivity : AppCompatActivity() {
         binding.btnFlotante.setOnClickListener {escucharEventoFlotante()}
 
         binding.btnFlotanteTexto.setOnClickListener {escucharEventoFlotanteTexto()}
+        **/
 
         //Log.e("RegistroActivity", "onCreate()")
+
+        binding.btnRegistro.setOnClickListener { registrarUsuario() }
     }
 
+    fun registrarUsuario(){
+
+        val nombre = binding.nombreUsuario.text.toString()
+        val nickname = binding.nicknameUsuario.text.toString()
+        val email = binding.emailUsuario.text.toString()
+        val password = binding.passwordUsuario.text.toString()
+
+        if (nombre.isEmpty()){
+            binding.nombreLayout.error = "Es obligatorio"
+        }else{
+            binding.nombreLayout.error = null
+        }
+
+        if (nickname.isEmpty()){
+            binding.nicknameLayout.error = "Es obligatorio"
+        }else{
+
+            if (nickname.length > 10){
+                binding.nicknameLayout.error = "Máximo 10 caractéres"
+            }else{
+                binding.nicknameLayout.error = null
+            }
+        }
+
+        if (email.isEmpty()){
+            binding.emailLayout.error = "Es obligatorio"
+        }else{
+            binding.emailLayout.error = null
+        }
+
+        if (password.isEmpty()){
+            binding.passwordLayout.error = "Es obligatorio"
+        }else{
+            binding.passwordLayout.error = null
+        }
+
+        if (nombre.isNotEmpty() && nickname.isNotEmpty() && nickname.length <= 10 && email.isNotEmpty() && password.isNotEmpty()){
+            val usuario = Usuario(4, nombre, nickname, email, password)
+            Usuarios.agregar(usuario)
+            Toast.makeText(this, "Usuario registrado exitosamente", Toast.LENGTH_LONG).show()
+            Log.e("RegistroActivity", Usuarios.listar().toString())
+        }
+    }
+
+    /**
     fun mostrarMensaje(raiz:View, mensaje:String){
         Snackbar.make(this, raiz, mensaje, Snackbar.LENGTH_LONG).show()
     }
+
 
     fun escucharEventoToggle(){
         if(binding.btnToggle.isChecked){
@@ -65,6 +119,7 @@ class RegistroActivity : AppCompatActivity() {
     fun escucharEventoFlotanteTexto(){
         mostrarMensaje(binding.btnFlotanteTexto, "Botón flotante texto")
     }
+    **/
 
     /**
     override fun onPause() {

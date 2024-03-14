@@ -12,4 +12,9 @@
     <string name="txt_btn_inicio_sesion">Iniciar Sesión</string>
     <string name="txt_btn_registrarse">Registrarse</string>
 
+    <!-- Textos del layout registro -->
+    <string name="txt_nombre">Escriba su nombre</string>
+    <string name="txt_nickname">Escriba su nickname</string>
+
+
 </resources>
