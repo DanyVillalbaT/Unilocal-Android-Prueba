@@ -26,28 +26,29 @@
 
     <EditText
         android:layout_width="300dp"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:hint="@string/txt_busqueda"
+        android:imeOptions="actionSearch"
         android:gravity="center"
         android:padding="10dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:background="@color/white"
-        android:drawableRight="@mipmap/ic_launcher_round"/>
+        android:background="@drawable/fondo_busqueda"
+        android:drawableRight="@drawable/ic_search"/>
 
     <Button
-        android:id="@+id/btn_registro"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:text="@string/txt_btn_registro"
+        android:id="@+id/btn_crear_lugar"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:text="@string/txt_btn_nuevo_lugar"
         android:layout_above="@+id/btn_login"
         android:layout_alignStart="@+id/btn_login"
-        android:onClick="irARegistro"/>
+        android:onClick="irACrearLugar"/>
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/btn_login"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
         android:text="@string/txt_btn_login"
         app:icon="@drawable/ic_done_android"
         android:layout_alignParentBottom="true"

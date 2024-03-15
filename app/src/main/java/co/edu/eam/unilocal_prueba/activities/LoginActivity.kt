@@ -1,7 +1,10 @@
 package co.edu.eam.unilocal_prueba.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.Toast
 import co.edu.eam.unilocal_prueba.R
 import co.edu.eam.unilocal_prueba.bd.Usuarios
@@ -18,6 +21,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnLogin.setOnClickListener { login() }
+        binding.btnRegistro.setOnClickListener { irARegistrarse() }
     }
 
     fun login(){
@@ -40,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
         if (correo.isNotEmpty() && password.isNotEmpty()){
 
             try {
-                val usuario = Usuarios.login(correo.toString(), password.toString())
+                Usuarios.login(correo.toString(), password.toString())
                 Toast.makeText(this, "Sus datos son correctos", Toast.LENGTH_LONG).show()
 
             }catch (e:Exception){
@@ -50,5 +54,10 @@ class LoginActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    fun irARegistrarse(){
+        val intentRegistro = Intent(this, RegistroActivity::class.java)
+        startActivity(intentRegistro)
     }
 }

@@ -1,22 +1,27 @@
 package co.edu.eam.unilocal_prueba.models
 
 import java.time.LocalDateTime
+import java.util.Date
 
-//Las imágenes y la fecha si van, mientras de prueba
 
 class Lugar(var id: Int,
             var nombre: String,
             var descripcion: String,
-            /*var imagenes: List<String>,*/
             var idCreador: Int,
             var estado: Boolean,
             var idCategoria: Int,
             var latitud: Float,
             var longitud: Float,
-            var idCiudad: Int,
-            /*var fecha: LocalDateTime*/
+            var idCiudad: Int
 ) {
 
+    var imagenes: ArrayList<String> = ArrayList()
     var telefonos: List<String> = ArrayList()
     var horarios: ArrayList<Horario> = ArrayList()
+    var fecha: Date = Date()
+
+    override fun toString(): String {
+        return "Lugar(id=$id, nombre='$nombre', descripcion='$descripcion', idCreador=$idCreador, estado=$estado, idCategoria=$idCategoria, latitud=$latitud, longitud=$longitud, idCiudad=$idCiudad, imagenes=$imagenes, telefonos=$telefonos, horarios=$horarios, fecha=$fecha)"
+    }
+
 }

@@ -7,11 +7,11 @@ object Categorias {
     private val categorias: ArrayList<Categoria> = ArrayList()
 
     init {
-        categorias.add(Categoria(1, "Hotel"))
-        categorias.add(Categoria(2, "Café"))
-        categorias.add(Categoria(3, "Restaurante"))
-        categorias.add(Categoria(4, "Parque"))
-        categorias.add(Categoria(5, "Bar"))
+        categorias.add(Categoria(1, "Hotel", "\uf594"))
+        categorias.add(Categoria(2, "Café", "\uf7b6"))
+        categorias.add(Categoria(3, "Restaurante", "\uf2e7"))
+        categorias.add(Categoria(4, "Parque", "\uf1bb"))
+        categorias.add(Categoria(5, "Bar", "\uf0fc"))
     }
 
     fun listar(): ArrayList<Categoria> {

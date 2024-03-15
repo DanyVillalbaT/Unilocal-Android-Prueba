@@ -2,9 +2,9 @@
     <string name="app_name">unilocal-prueba</string>
 
     <!-- Textos del layout main -->
-    <string name="txt_busqueda">Escriba el lugar que quiere buscar</string>
-    <string name="txt_btn_registro">Ir a registro</string>
+    <string name="txt_busqueda">Nombre del lugar</string>
     <string name="txt_btn_login">Ir a login</string>
+    <string name="txt_btn_nuevo_lugar">Nuevo lugar</string>
 
     <!-- Textos del layout login -->
     <string name="txt_email">Escriba su correo</string>
@@ -16,5 +16,10 @@
     <string name="txt_nombre">Escriba su nombre</string>
     <string name="txt_nickname">Escriba su nickname</string>
 
+    <!-- Textos del layout crear lugar -->
+    <string name="txt_nombre_lugar">Nombre del lugar</string>
+    <string name="txt_descripcion_lugar">Descripción del lugar</string>
+    <string name="txt_telefono_lugar">Teléfono del lugar</string>
+    <string name="txt_btn_crear_lugar">Crear nuevo lugar</string>
 
 </resources>

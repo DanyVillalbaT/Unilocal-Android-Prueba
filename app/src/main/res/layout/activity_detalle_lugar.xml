@@ -24,6 +24,14 @@
         android:text="Calificación promedio" />
 
     <TextView
+        android:id="@+id/icon_cat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20pt"
+        android:text="\uf594"
+        android:fontFamily="@font/font_awesome_6_free_solid_900"/>
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Categoría" />

@@ -42,4 +42,28 @@ object Lugares {
     fun listarAprobados(): ArrayList<Lugar> {
         return lugares.filter { l -> l.estado}.toCollection(ArrayList())
     }
+
+    fun listarRechazados(): ArrayList<Lugar> {
+        return lugares.filter { l -> !l.estado}.toCollection(ArrayList())
+    }
+
+    fun obtener(id: Int): Lugar?{
+        return lugares.firstOrNull { l -> l.id == id }
+    }
+
+    fun buscarNombre(nombre: String): ArrayList<Lugar> {
+        return lugares.filter { l -> l.nombre == nombre && l.estado}.toCollection(ArrayList())
+    }
+
+    fun crear(lugar: Lugar){
+        lugares.add(lugar)
+    }
+
+    fun buscarCiudad(idCiudad: Int): ArrayList<Lugar> {
+        return lugares.filter { l -> l.idCiudad == idCiudad && l.estado }.toCollection(ArrayList())
+    }
+
+    fun buscarCategoria(idCategoria: Int): ArrayList<Lugar> {
+        return lugares.filter { l -> l.idCategoria == idCategoria && l.estado }.toCollection(ArrayList())
+    }
 }

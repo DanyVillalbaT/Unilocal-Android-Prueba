@@ -68,12 +68,14 @@ class MainActivity : AppCompatActivity() {
         Log.e("MainActivity", "onRestart()")
     }
 
+    /* Método de la clase 11 PDF y su video
     fun irARegistro(v: View){
         //Imprimir mensaje en consola, hay diferentes tipos, de error, warning , etc
         Log.e("MainActivity", "Se escucha el evento del click")
         val intentRegistro = Intent(this, RegistroActivity::class.java)
         startActivity(intentRegistro)
     }
+     */
 
     fun irALogin(v: View){
         //Imprimir mensaje en pantalla, un mensaje flotante corto o largo
@@ -82,14 +84,14 @@ class MainActivity : AppCompatActivity() {
         startActivity(intentLogin)
     }
 
-    /*fun irACrearLugar(v: View){
+    fun irACrearLugar(v: View){
         //Hay diferentes maneras de imprimir mensajes en pantalla, unos más elaborados que otros.
         val intentCrearLugar = Intent(this, CrearLugarActivity::class.java)
         startActivity(intentCrearLugar)
 
     }
 
-    fun cambiarTexto(v: View){
+    /*fun cambiarTexto(v: View){
         textoInicial = "Nuevo valor"
         texto.text = textoInicial
     }*/
