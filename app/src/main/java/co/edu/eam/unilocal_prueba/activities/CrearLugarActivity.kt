@@ -77,6 +77,7 @@ class CrearLugarActivity : AppCompatActivity() {
 
         val nombre = binding.nombreLugar.text.toString()
         val descripcion = binding.descripcionLugar.text.toString()
+        val direccion = binding.direccionLugar.text.toString()
         val telefono = binding.telefonoLugar.text.toString()
         val idCiudad = ciudades[posCiudad].id
         val idCategoria = categorias[posCategoria].id
@@ -87,11 +88,27 @@ class CrearLugarActivity : AppCompatActivity() {
             binding.nombreLayout.error = null
         }
 
-        //Falta el resto de las validaciones de los otros campos
+        if (descripcion.isEmpty()){
+            binding.descripcionLayout.error = getString(R.string.es_obligatorio)
+        }else{
+            binding.descripcionLayout.error = null
+        }
 
-        if (nombre.isNotEmpty() && descripcion.isNotEmpty() && telefono.isNotEmpty() && idCiudad != -1 && idCategoria != -1){
+        if (direccion.isEmpty()){
+            binding.direccionLayout.error = getString(R.string.es_obligatorio)
+        }else{
+            binding.direccionLayout.error = null
+        }
 
-            val lugar = Lugar(7, nombre, descripcion, 1, false, idCategoria, 0f, 0f, idCiudad)
+        if (telefono.isEmpty()){
+            binding.telefonoLayout.error = getString(R.string.es_obligatorio)
+        }else{
+            binding.telefonoLayout.error = null
+        }
+
+        if (nombre.isNotEmpty() && descripcion.isNotEmpty() && direccion.isNotEmpty() && telefono.isNotEmpty() && idCiudad != -1 && idCategoria != -1){
+
+            val lugar = Lugar(7, nombre, descripcion, 1, false, idCategoria, direccion, 0f, 0f, idCiudad)
             val telefonos: ArrayList<String> = ArrayList()
             telefonos.add(telefono)
             lugar.telefonos = telefonos

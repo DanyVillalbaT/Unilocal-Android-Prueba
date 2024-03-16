@@ -19,6 +19,7 @@
     <!-- Textos del layout crear lugar -->
     <string name="txt_nombre_lugar">Nombre del lugar</string>
     <string name="txt_descripcion_lugar">Descripción del lugar</string>
+    <string name="txt_direccion_lugar">Dirección del lugar</string>
     <string name="txt_telefono_lugar">Teléfono del lugar</string>
     <string name="txt_btn_crear_lugar">Crear nuevo lugar</string>
 

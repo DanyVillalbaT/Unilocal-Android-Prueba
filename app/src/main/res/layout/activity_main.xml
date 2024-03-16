@@ -7,36 +7,47 @@
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
-    <!-- Lo que está comentado hace referencia a las clases 8 y 9 de los PDFs y videos-->
-
-    <!--
-    <TextView
-        android:id="@+id/texto_inicial"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30sp" />
-
-    -->
-
     <!-- Aquí se supone que va el mapa de google -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#DFDFDF" />
+        android:background="#a6eca8" />
 
-    <EditText
-        android:id="@+id/txt_busqueda"
-        android:layout_width="300dp"
+    <LinearLayout
+        android:id="@+id/caja_busqueda_menu"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="@string/txt_busqueda"
-        android:imeOptions="actionSearch"
-        android:singleLine="true"
+        android:orientation="horizontal"
         android:gravity="center"
-        android:padding="10dp"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:background="@drawable/fondo_busqueda"
-        android:drawableRight="@drawable/ic_search"/>
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/fondo_busqueda">
+
+        <Button
+            android:id="@+id/btn_menu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/font_awesome_6_free_solid_900"
+            android:textSize="22sp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="\uf0c9"/>
+
+        <EditText
+            android:id="@+id/txt_busqueda"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:hint="@string/txt_busqueda"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:paddingStart="20dp"
+            android:paddingEnd="15dp"
+            android:background="@null"
+            android:drawableEnd="@drawable/ic_search"/>
+
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_crear_lugar"
@@ -58,6 +69,17 @@
         android:layout_marginBottom="40dp"
         android:layout_marginRight="40dp"
         android:onClick="irALogin"/>
+
+    <!-- Lo que está comentado hace referencia a las clases 8 y 9 de los PDFs y videos-->
+
+    <!--
+    <TextView
+        android:id="@+id/texto_inicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp" />
+
+    -->
 
     <!--
     <Button

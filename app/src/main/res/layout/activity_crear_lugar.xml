@@ -55,6 +55,19 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/direccion_layout"
+            style="@style/til_form">
+
+            <EditText
+                android:id="@+id/direccion_lugar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txt_direccion_lugar"
+                android:background="@drawable/fondo_forms"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <Spinner
             android:id="@+id/ciudad_lugar"
             android:layout_width="300dp"

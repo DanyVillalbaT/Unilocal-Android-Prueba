@@ -28,7 +28,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.txtBusqueda.setOnEditorActionListener { v, actionId, event ->
             if(actionId == EditorInfo.IME_ACTION_SEARCH){
-                Log.e("MainActivity", binding.txtBusqueda.text.toString())
+
+                //Log.e("MainActivity", binding.txtBusqueda.text.toString())
+
+                val busqueda = binding.txtBusqueda.text.toString()
+
+                if (busqueda.isNotEmpty()){
+                    val intent = Intent(baseContext, ResultadoBusquedaActivity::class.java)
+                    intent.putExtra("textoBusqueda", busqueda)
+                    startActivity(intent)
+                }
             }
             true
         }
