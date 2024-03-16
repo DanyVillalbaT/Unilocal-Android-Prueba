@@ -22,4 +22,11 @@
     <string name="txt_telefono_lugar">Teléfono del lugar</string>
     <string name="txt_btn_crear_lugar">Crear nuevo lugar</string>
 
+    <!-- Textos de validaciones -->
+    <string name="es_obligatorio">Este campo es obligatorio</string>
+    <string name="maximo_caracteres">Máximo 10 caractéres</string>
+    <string name="usuario_creado">Usuario registrado exitosamente</string>
+    <string name="datos_correctos">Los datos son correctos</string>
+    <string name="datos_incorrectos">Los datos son incorrectos</string>
+
 </resources>

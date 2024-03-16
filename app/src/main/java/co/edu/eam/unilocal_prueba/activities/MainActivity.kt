@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import android.widget.Toast
 import co.edu.eam.unilocal_prueba.R
+import co.edu.eam.unilocal_prueba.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,9 +18,20 @@ class MainActivity : AppCompatActivity() {
     /*lateinit var texto: TextView
     lateinit var textoInicial: String*/
 
+    lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.txtBusqueda.setOnEditorActionListener { v, actionId, event ->
+            if(actionId == EditorInfo.IME_ACTION_SEARCH){
+                Log.e("MainActivity", binding.txtBusqueda.text.toString())
+            }
+            true
+        }
 
         /*texto = findViewById(R.id.texto_inicial)
 
@@ -33,6 +46,20 @@ class MainActivity : AppCompatActivity() {
         Log.e("MainActivity", "onCreate()")
     }
 
+    fun irALogin(v: View){
+        //Imprimir mensaje en pantalla, un mensaje flotante corto o largo
+        Toast.makeText(this, "Se dió click al botón del login", Toast.LENGTH_LONG).show()
+        val intentLogin = Intent(this, LoginActivity::class.java)
+        startActivity(intentLogin)
+    }
+
+    fun irACrearLugar(v: View){
+        //Hay diferentes maneras de imprimir mensajes en pantalla, unos más elaborados que otros.
+        val intentCrearLugar = Intent(this, CrearLugarActivity::class.java)
+        startActivity(intentCrearLugar)
+
+    }
+
     /*override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putString("texto", textoInicial)
@@ -41,7 +68,7 @@ class MainActivity : AppCompatActivity() {
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         Log.e("MainActivity", savedInstanceState.getString("texto").toString())
-    }*/
+    }
 
     override fun onStart() {
         super.onStart()
@@ -66,7 +93,7 @@ class MainActivity : AppCompatActivity() {
     override fun onRestart() {
         super.onRestart()
         Log.e("MainActivity", "onRestart()")
-    }
+    }*/
 
     /* Método de la clase 11 PDF y su video
     fun irARegistro(v: View){
@@ -76,20 +103,6 @@ class MainActivity : AppCompatActivity() {
         startActivity(intentRegistro)
     }
      */
-
-    fun irALogin(v: View){
-        //Imprimir mensaje en pantalla, un mensaje flotante corto o largo
-        Toast.makeText(this, "Se dió click al botón del login", Toast.LENGTH_LONG).show()
-        val intentLogin = Intent(this, LoginActivity::class.java)
-        startActivity(intentLogin)
-    }
-
-    fun irACrearLugar(v: View){
-        //Hay diferentes maneras de imprimir mensajes en pantalla, unos más elaborados que otros.
-        val intentCrearLugar = Intent(this, CrearLugarActivity::class.java)
-        startActivity(intentCrearLugar)
-
-    }
 
     /*fun cambiarTexto(v: View){
         textoInicial = "Nuevo valor"

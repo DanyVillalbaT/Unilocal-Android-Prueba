@@ -13,6 +13,7 @@ import co.edu.eam.unilocal_prueba.databinding.ActivityCrearLugarBinding
 import co.edu.eam.unilocal_prueba.models.Categoria
 import co.edu.eam.unilocal_prueba.models.Ciudad
 import co.edu.eam.unilocal_prueba.models.Lugar
+import co.edu.eam.unilocal_prueba.R
 
 class CrearLugarActivity : AppCompatActivity() {
 
@@ -81,7 +82,7 @@ class CrearLugarActivity : AppCompatActivity() {
         val idCategoria = categorias[posCategoria].id
 
         if (nombre.isEmpty()){
-            binding.nombreLayout.error = "Este campo es obligatorio"
+            binding.nombreLayout.error = getString(R.string.es_obligatorio)
         }else{
             binding.nombreLayout.error = null
         }

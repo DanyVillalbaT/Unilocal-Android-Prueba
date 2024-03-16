@@ -25,10 +25,12 @@
         android:background="#DFDFDF" />
 
     <EditText
+        android:id="@+id/txt_busqueda"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:hint="@string/txt_busqueda"
         android:imeOptions="actionSearch"
+        android:singleLine="true"
         android:gravity="center"
         android:padding="10dp"
         android:layout_centerHorizontal="true"

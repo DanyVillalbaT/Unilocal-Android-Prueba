@@ -50,30 +50,30 @@ class RegistroActivity : AppCompatActivity() {
         val password = binding.passwordUsuario.text.toString()
 
         if (nombre.isEmpty()){
-            binding.nombreLayout.error = "Es obligatorio"
+            binding.nombreLayout.error = getString(R.string.es_obligatorio)
         }else{
             binding.nombreLayout.error = null
         }
 
         if (nickname.isEmpty()){
-            binding.nicknameLayout.error = "Es obligatorio"
+            binding.nicknameLayout.error = getString(R.string.es_obligatorio)
         }else{
 
             if (nickname.length > 10){
-                binding.nicknameLayout.error = "Máximo 10 caractéres"
+                binding.nicknameLayout.error = getString(R.string.maximo_caracteres)
             }else{
                 binding.nicknameLayout.error = null
             }
         }
 
         if (email.isEmpty()){
-            binding.emailLayout.error = "Es obligatorio"
+            binding.emailLayout.error = getString(R.string.es_obligatorio)
         }else{
             binding.emailLayout.error = null
         }
 
         if (password.isEmpty()){
-            binding.passwordLayout.error = "Es obligatorio"
+            binding.passwordLayout.error = getString(R.string.es_obligatorio)
         }else{
             binding.passwordLayout.error = null
         }
@@ -81,7 +81,7 @@ class RegistroActivity : AppCompatActivity() {
         if (nombre.isNotEmpty() && nickname.isNotEmpty() && nickname.length <= 10 && email.isNotEmpty() && password.isNotEmpty()){
             val usuario = Usuario(4, nombre, nickname, email, password)
             Usuarios.agregar(usuario)
-            Toast.makeText(this, "Usuario registrado exitosamente", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, getString(R.string.usuario_creado), Toast.LENGTH_LONG).show()
             Log.e("RegistroActivity", Usuarios.listar().toString())
         }
     }

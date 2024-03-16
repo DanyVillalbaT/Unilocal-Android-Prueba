@@ -30,13 +30,13 @@ class LoginActivity : AppCompatActivity() {
         val password = binding.passwordUsuario.text
 
         if (correo.isEmpty()){
-            binding.emailLayout.error = "Obligatorio"
+            binding.emailLayout.error = getString(R.string.es_obligatorio)
         }else{
             binding.emailLayout.error = null
         }
 
         if (password.isEmpty()){
-            binding.passwordLayout.error = "Obligatorio"
+            binding.passwordLayout.error = getString(R.string.es_obligatorio)
         }else{
             binding.passwordLayout.error = null
         }
@@ -45,10 +45,10 @@ class LoginActivity : AppCompatActivity() {
 
             try {
                 Usuarios.login(correo.toString(), password.toString())
-                Toast.makeText(this, "Sus datos son correctos", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, getString(R.string.datos_correctos), Toast.LENGTH_LONG).show()
 
             }catch (e:Exception){
-                Toast.makeText(this, "Sus datos son incorrectos", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, getString(R.string.datos_incorrectos), Toast.LENGTH_LONG).show()
 
             }
 
